@@ -20,6 +20,7 @@ module EmberCLI
   def prepare!
     @prepared ||= begin
       Rails.configuration.assets.paths << root.join("assets").to_s
+      puts Rails.configuration.assets.paths.inspect
       at_exit{ cleanup }
       true
     end

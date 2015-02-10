@@ -15,7 +15,7 @@ module EmberCLI
 
     def compile
       prepare
-      silence_stream(STDOUT){ exec command }
+      exec command
       check_for_build_error!
     end
 
